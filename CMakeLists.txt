@@ -371,7 +371,7 @@ if(DBUS_USE_WINE)
     string(APPEND CMAKE_CXX_FLAGS " -gstabs")
 endif()
 
-if(UNIX AND NOT DBUS_DISABLE_ASSERT)
+if(UNIX AND NOT DBUS_DISABLE_ASSERT AND NOT APPLE)
     # required for backtrace
     string(APPEND CMAKE_C_FLAGS_DEBUG " -Wl,--export-dynamic")
     string(APPEND CMAKE_CXX_FLAGS_DEBUG " -Wl,--export-dynamic")
