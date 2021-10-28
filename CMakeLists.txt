@@ -5,8 +5,6 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules")
 # we do not need to have WIN32 defined
 set(CMAKE_LEGACY_CYGWIN_WIN32 0)
 
-project(dbus)
-
 # we need to be up to date
 cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
 if(COMMAND cmake_policy)
@@ -20,6 +18,8 @@ if(CMAKE_MAJOR_VERSION GREATER 2)
         cmake_policy(SET CMP0054 NEW)
     endif()
 endif()
+
+project(dbus)
 
 option(DBUS_BUILD_TESTS "enable unit test code" ON)
 
